@@ -1,0 +1,24 @@
+{
+  "name": "webdevelopment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohityadav2604/DEV_PP.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohityadav2604/DEV_PP/issues"
+  },
+  "homepage": "https://github.com/rohityadav2604/DEV_PP#readme",
+  "dependencies": {
+    "cheerio": "*",
+    "request": "^2.88.2"
+  },
+  "description": ""
+}

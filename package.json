@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rohityadav2604/DEV_PP#readme",
   "dependencies": {
     "cheerio": "*",
+    "puppeteer": "^9.1.1",
     "request": "^2.88.2"
   },
   "description": ""

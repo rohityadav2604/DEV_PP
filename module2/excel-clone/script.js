@@ -84,6 +84,7 @@ function getCellObjectFromElement(element) {
   let rowId = element.getAttribute("rowid");
   let colId = element.getAttribute("colid");
   return db[rowId][colId];
+  //fnrgroie
 }
 
 function getCellObjectFromName(name) {

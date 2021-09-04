@@ -11,6 +11,7 @@ class App extends React.Component
         movies:[],
         genre:[],
         selectedfilter:"All Genre",
+        page:12
     }
     setFilter=(filter)=>{
       this.setState({selectedfilter : filter}) 
@@ -36,7 +37,8 @@ class App extends React.Component
        this.setState({movies: currMoviesArr});
     }
 
-    deleteMovie = (id)=>{
+    deleteMovie = (id)=>
+    {
       // let index = this.state.movies.findIndex((el)=>{
       //         return el._id == id;
       // })
@@ -46,7 +48,14 @@ class App extends React.Component
      
       this.setState({movies:filterdarr});
      
-  }
+    }
+
+   getPage = (number)=>{
+     //console.log(number);
+     this.setState({page:number});
+
+   }
+
 
     componentDidMount()
     {
@@ -78,8 +87,11 @@ class App extends React.Component
                          moviesData = {this.state.movies}
                          toggleLike = {this.toggleLike}
                          deleteMovie = {this.deleteMovie}
+                         pageNumber = {this.state.page}
                          />
-                        <Pagination/>
+                        <Pagination
+                             getPage = {this.getPage}
+                        />
                  </div>
                  
            </div>

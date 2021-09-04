@@ -3,19 +3,42 @@
 import table from "./Table.css";
 let Table = (props)=>{
 
-    let allMovies = props.moviesData;
-    let currFilter = props.selectedFilter;
-   let filteredMovie =  allMovies.filter((el)=>{
-           if(currFilter == "All Genre")
-           {
-               return el;
-           }
-           else if(el.genre.name == currFilter)
-           {  
-              return el;
+    let allMovies ;
+    let filteredMovie
+    allMovies = props.moviesData;
+    filteredMovie = allMovies;
+    if(props.pageNumber<10)
+    {  
+      let startindex = (props.pageNumber-1)*4;
+      let endindex = Math.min(allMovies.length , props.pageNumber*4);
+      
+       filteredMovie =  allMovies.slice(startindex , endindex);
+      
 
-           }
-    });
+    }
+    if(props.pageNumber<10)
+    {
+
+      
+       let currFilter = props.selectedFilter;
+              filteredMovie =  filteredMovie.filter((el)=>{
+             if(currFilter == "All Genre")
+             {
+                 return el;
+             }
+             else if(el.genre.name == currFilter)
+             {  
+                return el;
+  
+             }  
+      });
+
+    }
+    
+    // console.log(props.pageNumber);
+    
+    
+
     return (
         <>
         <div class="row">

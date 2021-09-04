@@ -59,6 +59,7 @@ body{
     margin: auto;
     height: 30%;
     width: 15%;
+    padding: 10px;
 }
 .delete-todo{
     background-color: #e74c3c;

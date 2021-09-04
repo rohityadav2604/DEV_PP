@@ -1,0 +1,115 @@
+body{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .header{
+      align-items: center;
+      background-color: aqua;
+      height: 80px;
+      display: flex;
+      justify-content: space-evenly;
+      
+  }
+  .tickets-filter{
+      height: 60%;
+      background-color: beige;
+      width: 30%;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+    }
+  .filter{
+    display: flex;
+    height: 32px;
+    width: 38px;
+    background-color: chocolate;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+.filter:hover
+{
+    opacity: 1;
+}
+.red{
+      background-color: red;
+  }
+  .blue{
+       background-color: royalblue;
+  }
+  .green{
+       background-color: seagreen;
+  }
+  .ticket-actions{
+    height: 60%;
+    width: 20%;
+    align-items: center;
+    background-color: azure;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+  .ticket-actions div{
+     height: 100%;
+     width: 50%;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     border-radius: inherit;
+     
+  }
+  .ticket-actions:hover{
+      background-color: lawngreen;
+  }
+  .ticket-actions div:hover{
+    background-color:lightcoral;
+}
+.ticket-actions i {
+    font-size: 20px;
+    color: #2d3436;
+}
+.tickets-container{
+    height: calc(100vh - 80px);
+}
+.ticket-modal{
+    position: absolute;
+    top: 35%;
+    left: calc(50vw - 200px);
+    height: 30%;
+    width: 40%;
+    background-color: beige;
+    display: flex;
+}
+.ticket-text{
+    width: 70%;
+    background-color:beige;
+    outline: none;
+    padding: 15px;
+    font-size: 25px;
+    overflow: auto;
+    
+}
+.ticket-filters{
+    width: 30%;
+    background-color:aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    
+
+}
+.ticket-filter{
+    height: 10%;
+    width: 60%;
+    opacity: 1;
+    border-radius: 10px;
+}
+.selected-filter {
+    border: 3px solid white;
+    opacity: 1;
+}

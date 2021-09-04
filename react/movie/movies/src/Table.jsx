@@ -20,7 +20,7 @@ let Table = (props)=>{
     {
 
       
-       let currFilter = props.selectedFilter;
+              let currFilter = props.selectedFilter;
               filteredMovie =  filteredMovie.filter((el)=>{
              if(currFilter == "All Genre")
              {
@@ -32,6 +32,17 @@ let Table = (props)=>{
   
              }  
       });
+      
+      if(props.search.length>0)
+      {
+          console.log(props.search)
+          filteredMovie = allMovies.filter((el)=>{
+             let movietitle = el.title;
+             movietitle = movietitle.toLowerCase();
+             let search = props.search.toLowerCase();
+             return movietitle.includes(search);
+          })
+      }
 
     }
     

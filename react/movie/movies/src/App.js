@@ -11,7 +11,13 @@ class App extends React.Component
         movies:[],
         genre:[],
         selectedfilter:"All Genre",
-        page:12
+        page:12,
+        search :""
+    }
+
+    updateSearch = (value)=>{
+      
+        this.setState({search : value})
     }
     setFilter=(filter)=>{
       this.setState({selectedfilter : filter}) 
@@ -80,7 +86,9 @@ class App extends React.Component
            <div className =" row">
                  <Filter handleFilter = {this.setFilter} selectedFilter = {this.state.selectedfilter} genreData = {this.state.genre}/>
                  <div class ="col-9 p-4">
-                        <Search/>
+                        <Search
+                        updateSearch = {this.updateSearch}
+                        />
                         <Table  
                         
                         selectedFilter = {this.state.selectedfilter}
@@ -88,6 +96,7 @@ class App extends React.Component
                          toggleLike = {this.toggleLike}
                          deleteMovie = {this.deleteMovie}
                          pageNumber = {this.state.page}
+                         search = {this.state.search}
                          />
                         <Pagination
                              getPage = {this.getPage}

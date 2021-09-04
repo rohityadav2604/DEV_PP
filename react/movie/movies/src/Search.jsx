@@ -1,4 +1,4 @@
-let Search = ()=>{
+let Search = (props)=>{
     return (
         <>
         <p class="mt-4">Showing 9 movies from the database</p>
@@ -11,6 +11,10 @@ let Search = ()=>{
                 type="text"
                 class="form-control mt-4"
                 placeholder="Search..."
+                onChange = {(e)=>{
+                  //console.log(e.currentTarget.value)
+                  props.updateSearch(e.currentTarget.value)
+                }}
               />
             </div>
           </div>

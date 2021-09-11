@@ -3,9 +3,14 @@ import React from 'react';
 
 import Login from './components/Login';
 import Home from './components/Home';
+
+import AuthProvider from './Authprovider.jsx';
 let App =()=>{
   return (
     <React.Fragment>
+      <AuthProvider>
+
+
       <Router>
         <Switch>
           <Route exact path="/login">
@@ -21,6 +26,9 @@ let App =()=>{
         </Switch>
       
       </Router>
+
+      </AuthProvider>
+      
     </React.Fragment>
   );
 }

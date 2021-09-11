@@ -1,26 +1,20 @@
-import React, { useEffect } from 'react';
+import React, { useContext, useEffect } from 'react';
 import {signInWithGoogle , auth} from "../firebase"
+import {AuthContext} from '../Authprovider'
+import { Redirect } from "react-router-dom";
 let Login = ()=>{
 
-
-    useEffect(()=>{
-        auth.onAuthStateChanged((user)=>{
-            console.log(user);
-        })
-
-    } , [])
+    let user  = useContext(AuthContext);
+    
     return (
         <>
+        {user ? <Redirect to="/" /> : ""}
         <button 
         onClick={()=>{
             signInWithGoogle();
         }}
         className="btn btn-primary">Login With Google</button>
-        <button
-          onClick = {()=>{
-              auth.signOut();
-          }}
-        >logout</button>
+        
         </>
     )
     
